@@ -1,0 +1,15 @@
+<h1>List of all messages</h1>
+<!-- views/messages/index.html.erb -->
+<%= link_to 'New message', new_message_path %>
+
+
+<ul>
+  <% @messages.each do |message| %>
+  <li>
+    <%= message.content %>
+    <%= link_to 'Show' , message %>
+    <%= link_to 'Delete' , message, method: :delete %>
+    <%= link_to 'Edit', edit_message_path(message.id) %>
+  </li>
+  <% end %>
+</ul>

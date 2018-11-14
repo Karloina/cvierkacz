@@ -1,0 +1,8 @@
+<!-- views/messages/_comments.html.erb -->
+<h3>Comments</h3>
+  <%= comments.each do |comment| %>
+  <p>
+    <strong>Content:</strong>
+    <%= comment.content %>
+  </p>
+<% end %>
